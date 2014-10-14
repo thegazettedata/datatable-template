@@ -1,0 +1,167 @@
+#searchable-table_wrapper select {
+	width: 100px;
+}
+
+#searchable-table {
+	display: none;
+}
+
+table.dataTable {
+	border-spacing: 1px !important;
+}
+
+table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc, table.dataTable thead .sorting, table.dataTable tbody th, table.dataTable tbody td {
+	max-width: 10px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+table.dataTable thead th, table.dataTable tfoot th {
+	font-weight: bold;
+	background-color: #777 !important;
+	color: #FFF !important;
+	border-bottom: 1px solid #555 !important;
+	padding: 4px 18px !important;
+	font-family: Georgia;
+}
+
+table.dataTable thead {
+	background-color: #FFF;
+	box-shadow: 0 1px 3px 0 #333;
+}
+
+.thead-fixed {
+	position: fixed;
+	top: 45px;
+}
+
+@media only screen and (max-width: 800px) {	
+	table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc, table.dataTable thead .sorting, table.dataTable tbody th, table.dataTable tbody td {
+	  	max-width: none;
+		overflow: auto;
+	  }
+
+	  /* Force table to not be like tables anymore */
+	table.dataTable table, 
+	table.dataTable thead, 
+	table.dataTable tbody, 
+	table.dataTable th, 
+	table.dataTable td, 
+	table.dataTable tr { 
+		display: block !important; 
+	}
+ 
+	/* Hide table headers (but not display: none;, for accessibility) */
+	table.dataTable thead tr { 
+		position: absolute !important;
+		top: -9999px !important;
+		left: -9999px !important;
+	}
+
+ 	table.dataTable thead th, table.dataTable td {
+		padding: 4px 10px;
+	}
+
+	table.dataTable tr {
+		border: 1px solid #ccc !important;
+	}
+ 
+	table.dataTable td { 
+		/* Behave  like a "row" */
+		border: none !important;
+		border-bottom: 1px solid #eee !important; 
+		position: relative !important;
+		padding-left: 50% !important; 
+		white-space: normal !important;
+		text-align:left !important;
+	}
+
+	table.dataTable td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px !important;
+		left: 6px !important;
+		width: 45% !important; 
+		padding-right: 10px !important; 
+		white-space: nowrap !important;
+		text-align:left !important;
+		font-weight: bold !important;
+	}
+ 
+	/* Label the data */
+	table.dataTable td:before {
+		content: attr(data-title);
+	}
+
+}
+
+@media (max-width: 650px) {
+  .dataTables_wrapper .row-fluid .span6 {
+    width: 100% !important;
+    margin: 0px !important;
+  }
+
+  .dataTables_wrapper .dataTables_length {
+    float: left !important;
+    width: 98% !important;
+    padding-right: 1%;
+    padding-left: 1%;
+  }
+
+  .dataTables_wrapper .dataTables_length select, .dataTables_wrapper .dataTables_length label {
+    width: 100% !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    text-align: left;
+  }
+
+  .dataTables_wrapper .dataTables_length select {
+    height: 30px !important;
+    margin-bottom: 0px;
+  }
+
+  .dataTables_wrapper .dataTables_filter {
+    float: left !important;
+    width: 98% !important;
+    padding-top: 15px !important;
+    padding-right: 1% !important;
+    padding-left: 1% !important;
+    padding-bottom: 15px !important;
+    padding-top: 15px !important;
+  }
+
+  .dataTables_wrapper .dataTables_filter label {
+    width: 100% !important;
+    text-align: left !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+  }
+
+  .dataTables_wrapper .dataTables_filter input {
+	width: 97% !important;
+    padding-left: 2% !important;
+    padding-right: 0px !important;
+    padding-top: 2% !important;
+    padding-bottom: 2% !important;
+    margin-left: 0px;
+  }
+
+  .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_paginate {
+  	text-align: left;
+  }
+
+  .dataTables_wrapper .dataTables_info {
+  	padding-left: 5px;
+  	font-weight: bold;
+  }
+
+  .dataTables_wrapper .dataTables_paginate .paginate_button {
+  	min-width: 0px;
+	padding: 2px 5px;
+	margin-left: 0px;
+	text-align: left;
+	margin-top: 15px;
+  }
+}
