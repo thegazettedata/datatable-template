@@ -1,6 +1,6 @@
 #Datatable template
 
-[LIVE DEMO](http://gazettekcrgdata.github.io/datatable-template/)
+[LIVE DEMO](http://thegazettedata.github.io/datatable-template/)
 
 This is the [DataTable](http://www.datatables.net/) template used by The Gazette and KCRG to make a simple searchable table. This template uses DataTables, [Handlebars](http://handlebarsjs.com/) for templating, and [Tabletop](https://github.com/jsoma/tabletop) to pull the data from a Google spreadsheet into a table.
 
